@@ -1,0 +1,162 @@
+[
+  {
+    "condition": "shifted",
+    "schedule": "fixed",
+    "budget": 16,
+    "seeds": 5,
+    "recall": 0.7878000000000001,
+    "query_mean_ms": 0.24979475719999997,
+    "query_p95_ms": 0.29719507999999994,
+    "service_ms": 143.8562556
+  },
+  {
+    "condition": "shifted",
+    "schedule": "fixed",
+    "budget": 64,
+    "seeds": 5,
+    "recall": 0.9790800000000001,
+    "query_mean_ms": 0.7774484968,
+    "query_p95_ms": 0.8568083000000002,
+    "service_ms": 407.6831254
+  },
+  {
+    "condition": "shifted",
+    "schedule": "period2",
+    "budget": 16,
+    "seeds": 5,
+    "recall": 0.8392,
+    "query_mean_ms": 0.22146355719999997,
+    "query_p95_ms": 0.26557559199999997,
+    "service_ms": 1367.4920614000002
+  },
+  {
+    "condition": "shifted",
+    "schedule": "period2",
+    "budget": 64,
+    "seeds": 5,
+    "recall": 0.98356,
+    "query_mean_ms": 0.7236658292,
+    "query_p95_ms": 0.7982441360000001,
+    "service_ms": 1618.5931974000002
+  },
+  {
+    "condition": "shifted",
+    "schedule": "period1",
+    "budget": 16,
+    "seeds": 5,
+    "recall": 0.8540400000000001,
+    "query_mean_ms": 0.2001368048,
+    "query_p95_ms": 0.23877848,
+    "service_ms": 2991.4564306
+  },
+  {
+    "condition": "shifted",
+    "schedule": "period1",
+    "budget": 64,
+    "seeds": 5,
+    "recall": 0.9843999999999999,
+    "query_mean_ms": 0.6407742596,
+    "query_p95_ms": 0.71189214,
+    "service_ms": 3211.775158
+  },
+  {
+    "condition": "shifted",
+    "schedule": "period4",
+    "budget": 16,
+    "seeds": 5,
+    "recall": 0.8107200000000001,
+    "query_mean_ms": 0.2123313364,
+    "query_p95_ms": 0.249068348,
+    "service_ms": 775.816728
+  },
+  {
+    "condition": "shifted",
+    "schedule": "period4",
+    "budget": 64,
+    "seeds": 5,
+    "recall": 0.98044,
+    "query_mean_ms": 0.6694928736000001,
+    "query_p95_ms": 0.7351736059999999,
+    "service_ms": 1004.3974966
+  },
+  {
+    "condition": "shuffled",
+    "schedule": "fixed",
+    "budget": 16,
+    "seeds": 5,
+    "recall": 0.8396800000000001,
+    "query_mean_ms": 0.19390648600000002,
+    "query_p95_ms": 0.22821218999999998,
+    "service_ms": 114.97061059999999
+  },
+  {
+    "condition": "shuffled",
+    "schedule": "fixed",
+    "budget": 64,
+    "seeds": 5,
+    "recall": 0.98368,
+    "query_mean_ms": 0.6266241576,
+    "query_p95_ms": 0.6888472059999999,
+    "service_ms": 331.3294464
+  },
+  {
+    "condition": "shuffled",
+    "schedule": "period2",
+    "budget": 16,
+    "seeds": 5,
+    "recall": 0.8446800000000001,
+    "query_mean_ms": 0.20059819599999998,
+    "query_p95_ms": 0.23642567799999997,
+    "service_ms": 1276.5829754000001
+  },
+  {
+    "condition": "shuffled",
+    "schedule": "period2",
+    "budget": 64,
+    "seeds": 5,
+    "recall": 0.9854800000000001,
+    "query_mean_ms": 0.648741608,
+    "query_p95_ms": 0.7323961880000001,
+    "service_ms": 1500.6546813999998
+  },
+  {
+    "condition": "shuffled",
+    "schedule": "period1",
+    "budget": 16,
+    "seeds": 5,
+    "recall": 0.8484,
+    "query_mean_ms": 0.20105365400000003,
+    "query_p95_ms": 0.24367182200000004,
+    "service_ms": 2982.7243439999997
+  },
+  {
+    "condition": "shuffled",
+    "schedule": "period1",
+    "budget": 64,
+    "seeds": 5,
+    "recall": 0.9847600000000002,
+    "query_mean_ms": 0.6467821936,
+    "query_p95_ms": 0.7142798919999999,
+    "service_ms": 3205.5886138
+  },
+  {
+    "condition": "shuffled",
+    "schedule": "period4",
+    "budget": 16,
+    "seeds": 5,
+    "recall": 0.84276,
+    "query_mean_ms": 0.1969393604,
+    "query_p95_ms": 0.23564975999999999,
+    "service_ms": 757.1956922
+  },
+  {
+    "condition": "shuffled",
+    "schedule": "period4",
+    "budget": 64,
+    "seeds": 5,
+    "recall": 0.9841200000000001,
+    "query_mean_ms": 0.6352587572000001,
+    "query_p95_ms": 0.70421794,
+    "service_ms": 976.3553906
+  }
+]

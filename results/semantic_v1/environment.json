@@ -1,0 +1,129 @@
+{
+  "protocol": "semantic-order-v1",
+  "args": {
+    "output": "results/semantic_v1",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "started_unix": 1789511209.1221488,
+  "python": "3.10.12",
+  "numpy": "1.26.4",
+  "scipy": "1.15.3",
+  "faiss": "1.15.0",
+  "threads": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/home/ubuntu/.local/lib/python3.10/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "filepath": "/home/ubuntu/.local/lib/python3.10/site-packages/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/home/ubuntu/.local/lib/python3.10/site-packages/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+      "version": "0.3.15",
+      "threading_layer": "openmp",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "/home/ubuntu/.local/lib/python3.10/site-packages/scipy.libs/libscipy_openblas-68440149.so",
+      "version": "0.3.28",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    }
+  ],
+  "cpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  10\nOn-line CPU(s) list:                     0-9\nVendor ID:                               GenuineIntel\nModel name:                              Intel(R) Xeon(R) Platinum 8255C CPU @ 2.50GHz\nCPU family:                              6\nModel:                                   85\nThread(s) per core:                      1\nCore(s) per socket:                      10\nSocket(s):                               1\nStepping:                                5\nBogoMIPS:                                4999.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat avx512_vnni\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               320 KiB (10 instances)\nL1i cache:                               320 KiB (10 instances)\nL2 cache:                                40 MiB (10 instances)\nL3 cache:                                35.8 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-9\nVulnerability Gather data sampling:      Unknown: Dependent on hypervisor status\nVulnerability Indirect target selection: Mitigation; Aligned branch/return thunks\nVulnerability Itlb multihit:             KVM: Mitigation: VMX unsupported\nVulnerability L1tf:                      Mitigation; PTE Inversion\nVulnerability Mds:                       Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown\nVulnerability Meltdown:                  Mitigation; PTI\nVulnerability Mmio stale data:           Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Vulnerable\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Retpoline\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown\nVulnerability Vmscape:                   Not affected\n",
+  "source_hashes": {
+    "scripts/run_semantic.py": "b3be27e5f1e0f2e4f7dda7ac5a06d520897acf6ed7782a53ba7ea7ecc3a0b990",
+    "scripts/prepare_semantic_data.py": "ea38f981e1d15f6b6016723e1f22509584d621ab54953bdf7ad29f297a1859c7"
+  },
+  "data_manifest": {
+    "source_url": "https://ann-benchmarks.com/glove-100-angular.hdf5",
+    "source_sha256": "544af1d5e84e112cd4749571dcfd8ca109818a572f850af75a3a09e093a953c4",
+    "source_bytes": 485413888,
+    "source_attrs": {
+      "distance": "angular"
+    },
+    "source_shapes": {
+      "distances": [
+        10000,
+        100
+      ],
+      "neighbors": [
+        10000,
+        100
+      ],
+      "test": [
+        10000,
+        100
+      ],
+      "train": [
+        1183514,
+        100
+      ]
+    },
+    "download_headers": {
+      "download_client": "curl"
+    },
+    "prepared_unix": 1789510995.1979084,
+    "pool_sha256": "6247b96fcd28e30a4c66526a8b47ccbdea7d5c1985d9ab2723f2ef306a7b983e",
+    "preparation_seed": 20260916,
+    "design_count": 10000,
+    "evaluation_pool_count": 120000,
+    "preprocessing": "float32 L2 normalization; top design-pool principal component; median rank split",
+    "source_semantics": "Pretrained GloVe word embeddings from ANN-Benchmarks; not sentence/document embeddings",
+    "upstream_url": "https://nlp.stanford.edu/projects/glove/",
+    "license": "GloVe pretrained vectors: PDDL 1.0; ANN-Benchmarks redistribution",
+    "script_sha256": "ea38f981e1d15f6b6016723e1f22509584d621ab54953bdf7ad29f297a1859c7"
+  },
+  "budgets": {
+    "flat": [
+      0
+    ],
+    "ivf_fixed": [
+      4,
+      16,
+      64
+    ],
+    "ivf_rebuilt": [
+      4,
+      16,
+      64
+    ],
+    "hnsw": [
+      16,
+      64,
+      256
+    ]
+  },
+  "caveats": "Shared CPU host; sequential jobs, no affinity isolation; no deletes/concurrency",
+  "elapsed_s": 357.9162509441376
+}

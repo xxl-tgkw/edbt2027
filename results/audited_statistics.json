@@ -1,0 +1,347 @@
+{
+  "method": "exact conditional paired signed-rank",
+  "effect_direction": "right minus left",
+  "exploratory": true,
+  "source_hashes": {
+    "results/raw.json": "93fb8f16fecb68a97ddda0921e336bfdf211ef9ce569e02274324c807bf700ec",
+    "results/validation_v3/raw.json": "8383917b408a462afc7e8c697ca461bacdc34acec81f9cb8f6afd42074c7e91f"
+  },
+  "comparisons": [
+    {
+      "family": "legacy-digits-drift0.5",
+      "left": "lsh",
+      "right": "ivf_rebuild",
+      "metric": "recall@10",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "left_values": [
+        0.936,
+        0.8580000000000001,
+        0.9105000000000001,
+        0.7965000000000001,
+        0.8845000000000001
+      ],
+      "right_values": [
+        0.9934999999999999,
+        0.986,
+        0.991,
+        0.9834999999999999,
+        0.9919999999999999
+      ],
+      "differences": [
+        0.057499999999999885,
+        0.1279999999999999,
+        0.0804999999999999,
+        0.18699999999999983,
+        0.10749999999999982
+      ],
+      "mean_difference": 0.11209999999999987,
+      "paired_bootstrap_ci95": [
+        0.07669999999999988,
+        0.15389999999999987
+      ],
+      "p_exact": 0.0625,
+      "null": "symmetric paired differences; conditional sign enumeration",
+      "p_holm": 0.5
+    },
+    {
+      "family": "legacy-clustered-drift0.5",
+      "left": "lsh",
+      "right": "ivf_rebuild",
+      "metric": "recall@10",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "left_values": [
+        0.9984999999999999,
+        0.9990000000000001,
+        0.9969999999999999,
+        1.0,
+        0.9984999999999999
+      ],
+      "right_values": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "differences": [
+        0.0015000000000000568,
+        0.0009999999999998899,
+        0.0030000000000001137,
+        0.0,
+        0.0015000000000000568
+      ],
+      "mean_difference": 0.0014000000000000234,
+      "paired_bootstrap_ci95": [
+        0.0006000000000000227,
+        0.0023000000000000576
+      ],
+      "p_exact": 0.125,
+      "null": "symmetric paired differences; conditional sign enumeration",
+      "p_holm": 0.5
+    },
+    {
+      "family": "validation-q10",
+      "left": "faiss_ivf_static",
+      "right": "faiss_ivf_rebuild",
+      "metric": "recall",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "left_values": [
+        0.9620000000000001,
+        0.988,
+        0.9819999999999999,
+        0.9740000000000001,
+        0.982
+      ],
+      "right_values": [
+        0.9620000000000001,
+        0.982,
+        0.988,
+        0.9480000000000001,
+        0.9940000000000001
+      ],
+      "differences": [
+        0.0,
+        -0.006000000000000005,
+        0.006000000000000116,
+        -0.026000000000000023,
+        0.012000000000000122
+      ],
+      "mean_difference": -0.002799999999999958,
+      "paired_bootstrap_ci95": [
+        -0.015599999999999992,
+        0.007200000000000095
+      ],
+      "p_exact": 1.0,
+      "null": "symmetric paired differences; conditional sign enumeration",
+      "p_holm": 1.0
+    },
+    {
+      "family": "validation-q10",
+      "left": "faiss_ivf_static",
+      "right": "faiss_ivf_rebuild",
+      "metric": "service_ms",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "left_values": [
+        13.077054172754288,
+        12.742729857563972,
+        15.35928063094616,
+        10.632220655679703,
+        14.08127136528492
+      ],
+      "right_values": [
+        487.76550963521004,
+        497.9149717837572,
+        483.3025485277176,
+        478.4856289625168,
+        707.5404189527035
+      ],
+      "differences": [
+        474.68845546245575,
+        485.17224192619324,
+        467.94326789677143,
+        467.8534083068371,
+        693.4591475874186
+      ],
+      "mean_difference": 517.8233042359352,
+      "paired_bootstrap_ci95": [
+        469.25636157393456,
+        606.6806185990572
+      ],
+      "p_exact": 0.0625,
+      "null": "symmetric paired differences; conditional sign enumeration",
+      "p_holm": 0.5
+    },
+    {
+      "family": "validation-q40",
+      "left": "faiss_ivf_static",
+      "right": "faiss_ivf_rebuild",
+      "metric": "recall",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "left_values": [
+        0.98,
+        0.991,
+        0.9854999999999999,
+        0.98,
+        0.9834999999999999
+      ],
+      "right_values": [
+        0.98,
+        0.9845,
+        0.9894999999999999,
+        0.978,
+        0.985
+      ],
+      "differences": [
+        0.0,
+        -0.00649999999999995,
+        0.0040000000000000036,
+        -0.0020000000000000018,
+        0.0015000000000000568
+      ],
+      "mean_difference": -0.0005999999999999784,
+      "paired_bootstrap_ci95": [
+        -0.0038999999999999703,
+        0.002300000000000013
+      ],
+      "p_exact": 0.875,
+      "null": "symmetric paired differences; conditional sign enumeration",
+      "p_holm": 1.0
+    },
+    {
+      "family": "validation-q40",
+      "left": "faiss_ivf_static",
+      "right": "faiss_ivf_rebuild",
+      "metric": "service_ms",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "left_values": [
+        36.74486465752125,
+        37.33435645699501,
+        36.442091688513756,
+        34.58846174180508,
+        46.12892121076584
+      ],
+      "right_values": [
+        517.128424718976,
+        517.9576873779297,
+        500.61903335154057,
+        494.60686184465885,
+        730.7122703641653
+      ],
+      "differences": [
+        480.3835600614548,
+        480.6233309209347,
+        464.1769416630268,
+        460.0184001028538,
+        684.5833491533995
+      ],
+      "mean_difference": 513.9571163803339,
+      "paired_bootstrap_ci95": [
+        464.97109457850456,
+        599.710064008832
+      ],
+      "p_exact": 0.0625,
+      "null": "symmetric paired differences; conditional sign enumeration",
+      "p_holm": 0.5
+    },
+    {
+      "family": "validation-q160",
+      "left": "faiss_ivf_static",
+      "right": "faiss_ivf_rebuild",
+      "metric": "recall",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "left_values": [
+        0.9853750000000001,
+        0.9873750000000001,
+        0.9811250000000001,
+        0.982125,
+        0.9816250000000001
+      ],
+      "right_values": [
+        0.9860000000000001,
+        0.985625,
+        0.9834999999999999,
+        0.980375,
+        0.98175
+      ],
+      "differences": [
+        0.0006249999999999867,
+        -0.0017500000000001403,
+        0.002374999999999794,
+        -0.0017500000000000293,
+        0.00012499999999993072
+      ],
+      "mean_difference": -7.500000000009166e-05,
+      "paired_bootstrap_ci95": [
+        -0.0013750000000000817,
+        0.0012249999999998985
+      ],
+      "p_exact": 1.0,
+      "null": "symmetric paired differences; conditional sign enumeration",
+      "p_holm": 1.0
+    },
+    {
+      "family": "validation-q160",
+      "left": "faiss_ivf_static",
+      "right": "faiss_ivf_rebuild",
+      "metric": "service_ms",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "left_values": [
+        121.79468385875225,
+        133.95286351442337,
+        180.03377318382263,
+        120.46205252408981,
+        171.89461179077625
+      ],
+      "right_values": [
+        616.9373113662004,
+        852.2462528198957,
+        583.2099374383688,
+        576.9701041281223,
+        867.7672073245049
+      ],
+      "differences": [
+        495.1426275074482,
+        718.2933893054724,
+        403.17616425454617,
+        456.5080516040325,
+        695.8725955337286
+      ],
+      "mean_difference": 553.7985656410456,
+      "paired_bootstrap_ci95": [
+        442.9022118449211,
+        664.69491943717
+      ],
+      "p_exact": 0.0625,
+      "null": "symmetric paired differences; conditional sign enumeration",
+      "p_holm": 0.5
+    }
+  ]
+}

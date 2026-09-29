@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "folder": "results/semantic_scale_100k_v2",
+      "rows": 18,
+      "summary_rows": 14,
+      "size": 100000
+    },
+    {
+      "folder": "results/semantic_scale_250k_v2",
+      "rows": 18,
+      "summary_rows": 14,
+      "size": 250000
+    },
+    {
+      "folder": "results/semantic_rebuild_sensitivity_v1",
+      "rows": 40,
+      "summary_rows": 16
+    }
+  ]
+}

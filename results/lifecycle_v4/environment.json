@@ -1,0 +1,91 @@
+{
+  "protocol": "semantic-lifecycle-v1",
+  "args": {
+    "output": "results/lifecycle_v4",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "started_unix": 1789524326.2320879,
+  "python": "3.10.12",
+  "numpy": "1.26.4",
+  "faiss": "1.15.0",
+  "threads": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/home/ubuntu/.local/lib/python3.10/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "filepath": "/home/ubuntu/.local/lib/python3.10/site-packages/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/home/ubuntu/.local/lib/python3.10/site-packages/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+      "version": "0.3.15",
+      "threading_layer": "openmp",
+      "architecture": "SkylakeX"
+    }
+  ],
+  "data_manifest": {
+    "source_url": "https://ann-benchmarks.com/glove-100-angular.hdf5",
+    "source_sha256": "544af1d5e84e112cd4749571dcfd8ca109818a572f850af75a3a09e093a953c4",
+    "source_bytes": 485413888,
+    "source_attrs": {
+      "distance": "angular"
+    },
+    "source_shapes": {
+      "distances": [
+        10000,
+        100
+      ],
+      "neighbors": [
+        10000,
+        100
+      ],
+      "test": [
+        10000,
+        100
+      ],
+      "train": [
+        1183514,
+        100
+      ]
+    },
+    "download_headers": {
+      "download_client": "curl"
+    },
+    "prepared_unix": 1789510995.1979084,
+    "pool_sha256": "6247b96fcd28e30a4c66526a8b47ccbdea7d5c1985d9ab2723f2ef306a7b983e",
+    "preparation_seed": 20260916,
+    "design_count": 10000,
+    "evaluation_pool_count": 120000,
+    "preprocessing": "float32 L2 normalization; top design-pool principal component; median rank split",
+    "source_semantics": "Pretrained GloVe word embeddings from ANN-Benchmarks; not sentence/document embeddings",
+    "upstream_url": "https://nlp.stanford.edu/projects/glove/",
+    "license": "GloVe pretrained vectors: PDDL 1.0; ANN-Benchmarks redistribution",
+    "script_sha256": "ea38f981e1d15f6b6016723e1f22509584d621ab54953bdf7ad29f297a1859c7"
+  },
+  "source_hashes": {
+    "scripts/run_semantic_lifecycle.py": "37e6a871184a84701a237a3286419a0e7faf62c41263a90cccfabc45a4b18a30"
+  },
+  "caveats": "synchronized concurrent reads; no claim of lock-free production throughput",
+  "elapsed_s": 30.865314960479736
+}

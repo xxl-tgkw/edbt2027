@@ -1,0 +1,8 @@
+# Environment observed for the audited run; Python 3.10.12.
+numpy==1.26.4
+scipy==1.15.3
+scikit-learn==1.7.2
+faiss-cpu==1.15.0
+matplotlib==3.10.9
+threadpoolctl==3.6.0
+h5py==3.16.0

@@ -1,0 +1,156 @@
+[
+  {
+    "size": 250000,
+    "condition": "shifted",
+    "policy": "flat",
+    "budget": 0,
+    "recall": 1.0,
+    "query_p95_ms": 9.499071466666667,
+    "query_mean_ms": 9.280546761979167,
+    "distance_count": 250000.0,
+    "service_ms": 6021.208941
+  },
+  {
+    "size": 250000,
+    "condition": "shifted",
+    "policy": "ivf_fixed",
+    "budget": 4,
+    "recall": 0.6841145833333333,
+    "query_p95_ms": 0.36416292666666655,
+    "query_mean_ms": 0.21973494427083332,
+    "distance_count": 4791.286458333333,
+    "service_ms": 208.20202866666668
+  },
+  {
+    "size": 250000,
+    "condition": "shifted",
+    "policy": "ivf_fixed",
+    "budget": 16,
+    "recall": 0.8484374999999998,
+    "query_p95_ms": 0.96496521,
+    "query_mean_ms": 0.6930991270833333,
+    "distance_count": 17107.302083333332,
+    "service_ms": 511.15510566666666
+  },
+  {
+    "size": 250000,
+    "condition": "shifted",
+    "policy": "ivf_fixed",
+    "budget": 64,
+    "recall": 0.9598958333333334,
+    "query_p95_ms": 3.063413583333333,
+    "query_mean_ms": 2.6237674833333333,
+    "distance_count": 65931.40104166667,
+    "service_ms": 1746.7828536666666
+  },
+  {
+    "size": 250000,
+    "condition": "shifted",
+    "policy": "ivf_rebuilt",
+    "budget": 4,
+    "recall": 0.7057812500000001,
+    "query_p95_ms": 0.28437833,
+    "query_mean_ms": 0.21319116458333331,
+    "distance_count": 4537.969791666667,
+    "service_ms": 10282.030613333334
+  },
+  {
+    "size": 250000,
+    "condition": "shifted",
+    "policy": "ivf_rebuilt",
+    "budget": 16,
+    "recall": 0.8653124999999999,
+    "query_p95_ms": 0.8378043733333332,
+    "query_mean_ms": 0.6914637505208333,
+    "distance_count": 17151.537500000002,
+    "service_ms": 10588.125068333335
+  },
+  {
+    "size": 250000,
+    "condition": "shifted",
+    "policy": "ivf_rebuilt",
+    "budget": 64,
+    "recall": 0.9661458333333334,
+    "query_p95_ms": 2.8493129066666665,
+    "query_mean_ms": 2.5824398421874997,
+    "distance_count": 66940.28645833333,
+    "service_ms": 11798.349767
+  },
+  {
+    "size": 250000,
+    "condition": "shuffled",
+    "policy": "flat",
+    "budget": 0,
+    "recall": 1.0,
+    "query_p95_ms": 9.548524036666667,
+    "query_mean_ms": 9.314060919270835,
+    "distance_count": 250000.0,
+    "service_ms": 6043.092890333333
+  },
+  {
+    "size": 250000,
+    "condition": "shuffled",
+    "policy": "ivf_fixed",
+    "budget": 4,
+    "recall": 0.6958333333333333,
+    "query_p95_ms": 0.26970071666666656,
+    "query_mean_ms": 0.20815212812499997,
+    "distance_count": 4444.809895833333,
+    "service_ms": 198.02653
+  },
+  {
+    "size": 250000,
+    "condition": "shuffled",
+    "policy": "ivf_fixed",
+    "budget": 16,
+    "recall": 0.8585937500000002,
+    "query_p95_ms": 0.8388352133333332,
+    "query_mean_ms": 0.6828461864583334,
+    "distance_count": 16714.34375,
+    "service_ms": 501.8307273333333
+  },
+  {
+    "size": 250000,
+    "condition": "shuffled",
+    "policy": "ivf_fixed",
+    "budget": 64,
+    "recall": 0.9622395833333334,
+    "query_p95_ms": 2.7696747466666665,
+    "query_mean_ms": 2.5042852984375,
+    "distance_count": 65260.994791666664,
+    "service_ms": 1667.551759
+  },
+  {
+    "size": 250000,
+    "condition": "shuffled",
+    "policy": "ivf_rebuilt",
+    "budget": 4,
+    "recall": 0.7077083333333333,
+    "query_p95_ms": 0.27042936666666667,
+    "query_mean_ms": 0.2121461380208333,
+    "distance_count": 4478.5578125,
+    "service_ms": 10336.787255999998
+  },
+  {
+    "size": 250000,
+    "condition": "shuffled",
+    "policy": "ivf_rebuilt",
+    "budget": 16,
+    "recall": 0.8627604166666666,
+    "query_p95_ms": 0.8048714766666666,
+    "query_mean_ms": 0.6859057843749999,
+    "distance_count": 16921.764583333334,
+    "service_ms": 10639.993429666667
+  },
+  {
+    "size": 250000,
+    "condition": "shuffled",
+    "policy": "ivf_rebuilt",
+    "budget": 64,
+    "recall": 0.96578125,
+    "query_p95_ms": 2.7949155466666666,
+    "query_mean_ms": 2.565009550520833,
+    "distance_count": 66335.47395833333,
+    "service_ms": 11842.61984
+  }
+]

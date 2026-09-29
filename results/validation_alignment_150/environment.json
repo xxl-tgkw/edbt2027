@@ -1,0 +1,83 @@
+{
+  "protocol": "disjoint-interleaved-v4",
+  "data_sha256": "3aede38d61863908ad78613f6a32ed271626dd12800ba2636569512369268a84",
+  "drift": 0.5,
+  "query_shift_factor": 1.5,
+  "update_noise_std": 0.15,
+  "query_noise_std": 0.05,
+  "source_hashes": {
+    "scripts/run_validation.py": "c7b5f0f5075768f64a71057e5e3bd19e03bf4cbfd468cfff1a926821d6dbad9b",
+    "scripts/run_benchmark.py": "aef89c3a726ef7658a753f750b27583b09f65c570920a0d33816ef0cece46d03"
+  },
+  "python": "3.10.12",
+  "numpy": "1.26.4",
+  "sklearn": "1.7.2",
+  "faiss": "1.15.0",
+  "platform": "Linux-5.15.0-171-generic-x86_64-with-glibc2.35",
+  "threads": [
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/home/ubuntu/.local/lib/python3.10/site-packages/numpy.libs/libopenblas64_p-r0-0cf96a72.3.23.dev.so",
+      "version": "0.3.23.dev",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "filepath": "/home/ubuntu/.local/lib/python3.10/site-packages/faiss_cpu.libs/libgomp-e985bcbb.so.1.0.0",
+      "version": null
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libopenblas",
+      "filepath": "/home/ubuntu/.local/lib/python3.10/site-packages/faiss_cpu.libs/libopenblaso-r0-d77a1985.3.15.so",
+      "version": "0.3.15",
+      "threading_layer": "openmp",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "blas",
+      "internal_api": "openblas",
+      "num_threads": 1,
+      "prefix": "libscipy_openblas",
+      "filepath": "/home/ubuntu/.local/lib/python3.10/site-packages/scipy.libs/libscipy_openblas-68440149.so",
+      "version": "0.3.28",
+      "threading_layer": "pthreads",
+      "architecture": "SkylakeX"
+    },
+    {
+      "user_api": "openmp",
+      "internal_api": "openmp",
+      "num_threads": 1,
+      "prefix": "libgomp",
+      "filepath": "/home/ubuntu/.local/lib/python3.10/site-packages/scikit_learn.libs/libgomp-a34b3233.so.1.0.0",
+      "version": null
+    }
+  ],
+  "cpu": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 48 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  10\nOn-line CPU(s) list:                     0-9\nVendor ID:                               GenuineIntel\nModel name:                              Intel(R) Xeon(R) Platinum 8255C CPU @ 2.50GHz\nCPU family:                              6\nModel:                                   85\nThread(s) per core:                      1\nCore(s) per socket:                      10\nSocket(s):                               1\nStepping:                                5\nBogoMIPS:                                4999.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm mpx avx512f avx512dq rdseed adx smap clflushopt clwb avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 arat avx512_vnni\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               320 KiB (10 instances)\nL1i cache:                               320 KiB (10 instances)\nL2 cache:                                40 MiB (10 instances)\nL3 cache:                                35.8 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-9\nVulnerability Gather data sampling:      Unknown: Dependent on hypervisor status\nVulnerability Indirect target selection: Mitigation; Aligned branch/return thunks\nVulnerability Itlb multihit:             KVM: Mitigation: VMX unsupported\nVulnerability L1tf:                      Mitigation; PTE Inversion\nVulnerability Mds:                       Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown\nVulnerability Meltdown:                  Mitigation; PTI\nVulnerability Mmio stale data:           Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Vulnerable\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:                Mitigation; Retpolines; STIBP disabled; RSB filling; PBRSB-eIBRS Not affected; BHI Retpoline\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Vulnerable: Clear CPU buffers attempted, no microcode; SMT Host state unknown\nVulnerability Vmscape:                   Not affected\n",
+  "runner_sha256": "c7b5f0f5075768f64a71057e5e3bd19e03bf4cbfd468cfff1a926821d6dbad9b",
+  "args": {
+    "output": "results/validation_alignment_150",
+    "drift": 0.5,
+    "query_shift_factor": 1.5,
+    "seeds": 5,
+    "ratios": [
+      40
+    ],
+    "methods": [
+      "faiss_flat",
+      "faiss_ivf_static",
+      "faiss_ivf_rebuild"
+    ]
+  },
+  "started_unix": 1789495413.3898478,
+  "elapsed_s": 29.318989276885986
+}

@@ -1,0 +1,59 @@
+{
+  "protocol": "semantic-rebuild-sensitivity-v1",
+  "args": {
+    "output": "results/semantic_rebuild_sensitivity_v1",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "python": "3.10.12",
+  "faiss": "1.15.0",
+  "source_manifest": {
+    "source_url": "https://ann-benchmarks.com/glove-100-angular.hdf5",
+    "source_sha256": "544af1d5e84e112cd4749571dcfd8ca109818a572f850af75a3a09e093a953c4",
+    "source_bytes": 485413888,
+    "source_attrs": {
+      "distance": "angular"
+    },
+    "source_shapes": {
+      "distances": [
+        10000,
+        100
+      ],
+      "neighbors": [
+        10000,
+        100
+      ],
+      "test": [
+        10000,
+        100
+      ],
+      "train": [
+        1183514,
+        100
+      ]
+    },
+    "download_headers": {
+      "download_client": "curl"
+    },
+    "prepared_unix": 1789510995.1979084,
+    "pool_sha256": "6247b96fcd28e30a4c66526a8b47ccbdea7d5c1985d9ab2723f2ef306a7b983e",
+    "preparation_seed": 20260916,
+    "design_count": 10000,
+    "evaluation_pool_count": 120000,
+    "preprocessing": "float32 L2 normalization; top design-pool principal component; median rank split",
+    "source_semantics": "Pretrained GloVe word embeddings from ANN-Benchmarks; not sentence/document embeddings",
+    "upstream_url": "https://nlp.stanford.edu/projects/glove/",
+    "license": "GloVe pretrained vectors: PDDL 1.0; ANN-Benchmarks redistribution",
+    "script_sha256": "ea38f981e1d15f6b6016723e1f22509584d621ab54953bdf7ad29f297a1859c7"
+  },
+  "source_hashes": {
+    "run_semantic.py": "eb90300c64ed60b5fcb67fa7414b2ba3ad9175b34daab7addecbfdf3606a95f4",
+    "prepare_semantic_data.py": "ea38f981e1d15f6b6016723e1f22509584d621ab54953bdf7ad29f297a1859c7"
+  },
+  "rows": 40
+}

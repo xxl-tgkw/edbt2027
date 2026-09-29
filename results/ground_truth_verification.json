@@ -1,0 +1,23 @@
+{
+  "query_ground_truths_verified": 6000,
+  "scipy": "1.15.3",
+  "method": "SciPy cdist float64 squared Euclidean; set equality at k=10",
+  "source_hashes": {
+    "results/validation_v3/workload_0.json": "9f0a4df40dbf6ff809dbec554e6d6ae34c68a3a6c747cc9bc593da1bd08c6743",
+    "results/validation_v3/workload_1.json": "30c0c6d8f9c5ffdede6e2b6d3908fa4c12e813447f6ff63d92d24f8810c5f934",
+    "results/validation_v3/workload_2.json": "75eaa5ef03cf26693a6fa0c330be067da158a448906ed96327bbf053ff322ccf",
+    "results/validation_v3/workload_3.json": "05d145bf1ff07642bba5ef8b2200b3b039f79ce5de50904d5d291919660f25c9",
+    "results/validation_v3/workload_4.json": "2f6d9176b31efe1581d465093a87e1752d0a0d12b541b89543bb3f42d5f65ac1",
+    "results/validation_alignment_100/workload_0.json": "bb808894f49b216ac530906da637a1714b95140e324517de518552cac75f2b89",
+    "results/validation_alignment_100/workload_1.json": "273a19dfb8ec1bf420d80838956b89282dafcc821ab3aeb9a411e968a2f38c75",
+    "results/validation_alignment_100/workload_2.json": "a76a36f266e02c2ded68cb3a46a964f3c4c8ada34080e76abff27de48e4ae20a",
+    "results/validation_alignment_100/workload_3.json": "365e2376054c56851fa8caa335c02cb77023b09e82b12e3198745033b9a5914c",
+    "results/validation_alignment_100/workload_4.json": "e4a556ef201857b2772f3e74e421d139905e94a493ed45d30d6f904d06a4ecde",
+    "results/validation_alignment_150/workload_0.json": "627dec4c6279ea1c1d33e6e903ee016303b084bd0cd34c8eee619173212d3da7",
+    "results/validation_alignment_150/workload_1.json": "85a003901e7197105fae7db90dd94683df5270a5ef03206f3163aefe9c348cbf",
+    "results/validation_alignment_150/workload_2.json": "3ce920e28fad82edce7facbe2d8cfd7183252f4fd4a327ff7ceea9ecb4061a68",
+    "results/validation_alignment_150/workload_3.json": "2e3fd10c65b62cb74d79dd357988832e086a2d31554dda0b4bdd3f5ffd9a9a92",
+    "results/validation_alignment_150/workload_4.json": "9a7e1758952a95b3333202425b41b2091df5eea1eb5c601f55697b7da286c52a"
+  },
+  "elapsed_s": 19.72305827587843
+}

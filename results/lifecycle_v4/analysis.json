@@ -1,0 +1,85 @@
+{
+  "protocol": "semantic-lifecycle-v1",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "runs": 20,
+  "aggregates": [
+    {
+      "policy": "flat",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "recall": 1.0,
+      "commit_ms": 11.4372114,
+      "query_p95_ms": 0.4381456299999999,
+      "concurrent_wall_ms": 103.2849076,
+      "persistence_rate": 1.0,
+      "rollback_rate": 1.0,
+      "pre_commit_visibility_rate": 0.0,
+      "deleted_visibility_rate": 0.0
+    },
+    {
+      "policy": "hnsw",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "recall": 0.9366666666666668,
+      "commit_ms": 954.9143402,
+      "query_p95_ms": 0.31042983,
+      "concurrent_wall_ms": 300.26917960000003,
+      "persistence_rate": 1.0,
+      "rollback_rate": 1.0,
+      "pre_commit_visibility_rate": 0.0,
+      "deleted_visibility_rate": 0.0
+    },
+    {
+      "policy": "ivf_fixed",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "recall": 0.8717777777777778,
+      "commit_ms": 54.6548952,
+      "query_p95_ms": 0.2842331699999999,
+      "concurrent_wall_ms": 603.8819294,
+      "persistence_rate": 1.0,
+      "rollback_rate": 1.0,
+      "pre_commit_visibility_rate": 0.0,
+      "deleted_visibility_rate": 0.0
+    },
+    {
+      "policy": "ivf_rebuilt",
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "recall": 0.8717777777777778,
+      "commit_ms": 49.612787000000004,
+      "query_p95_ms": 0.26910663999999995,
+      "concurrent_wall_ms": 788.4651236,
+      "persistence_rate": 1.0,
+      "rollback_rate": 1.0,
+      "pre_commit_visibility_rate": 0.0,
+      "deleted_visibility_rate": 0.0
+    }
+  ]
+}

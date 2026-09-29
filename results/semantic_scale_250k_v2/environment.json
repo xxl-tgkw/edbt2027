@@ -1,0 +1,24 @@
+{
+  "protocol": "semantic-scale-v1",
+  "args": {
+    "output": "results/semantic_scale_250k_v2",
+    "sizes": [
+      250000
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "nq": 128
+  },
+  "source_sha256": "544af1d5e84e112cd4749571dcfd8ca109818a572f850af75a3a09e093a953c4",
+  "source_shape": [
+    1183514,
+    100
+  ],
+  "python": "3.10.12",
+  "faiss": "1.15.0",
+  "started_unix": 1790404892.6487436,
+  "elapsed_s": 244.4575650691986
+}

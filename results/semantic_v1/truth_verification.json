@@ -1,0 +1,28 @@
+{
+  "ground_truths_checked": 24000,
+  "source_hashes": {
+    "results/semantic_v1/workload_shifted_0.json": "2982a3197bc6b2c1b68629b7dbf3d319a5ae0de06ce4fcdc0c9b422cbd37e306",
+    "results/semantic_v1/workload_shifted_1.json": "3fe480e9b51a971620b043953394f47fa8ce5bc500c1dc7702eb37ffb90f8ad7",
+    "results/semantic_v1/workload_shifted_2.json": "a531d47d33880cd3f57b61e685a50e37610e023b63ec3df430ccd31ee57d8a56",
+    "results/semantic_v1/workload_shifted_3.json": "45e4f5fcada15997c7be3916d01e6e7462588fa4ca8352fd0fa0e40f0cd3edef",
+    "results/semantic_v1/workload_shifted_4.json": "09bdde0445b93d6bcdf6a343ad0b7313376757f3dbcbde457bdb74617f71ce78",
+    "results/semantic_v1/workload_shifted_5.json": "71bc7e0eadb966cef2c456060563f3e14b057c5dcaffa7db996b3820ea30ac6c",
+    "results/semantic_v1/workload_shifted_6.json": "aa7047c62c256a38cfa4173554a9afbd3082cfe9c9739ae64c0f7d35f02817cf",
+    "results/semantic_v1/workload_shifted_7.json": "0cb36254a459b397157f3efb69a53ea80e4c73b52371adfc1dc96cd84d10793f",
+    "results/semantic_v1/workload_shifted_8.json": "5a28d69361cb384d6c5e186b98bd85c8d4c04cf4450933a9aaa6dc09d5ed1aab",
+    "results/semantic_v1/workload_shifted_9.json": "693731908bb93e6565837edb7a1cd3e9882016aa7c53ca5fad570378f787dca9",
+    "results/semantic_v1/workload_shuffled_0.json": "d4d27c908fbe3bda4b686c4c42cf57ca1dbadf2b2a743aa8c689601b6005f4f7",
+    "results/semantic_v1/workload_shuffled_1.json": "5cf8279e4228d7c8a38c7cb70abe6c2c0057755824d54205e7e8d60951d568e7",
+    "results/semantic_v1/workload_shuffled_2.json": "27701e10e0c2af6f9a5ccf7017fa56d9b5cd4844a89e9d4d0186f9bac06094e4",
+    "results/semantic_v1/workload_shuffled_3.json": "9de4f893c6e53ff56a3da5e36e519a9dcd25abfe518662b3e5d78524f866287d",
+    "results/semantic_v1/workload_shuffled_4.json": "0789ac0a559eca31e4c3936bdde83c5d4c5fae2eb66c61c0884e6bfdffe4a377",
+    "results/semantic_v1/workload_shuffled_5.json": "40e366183c921ba67a528aaa4ca9fd88b7a25e94f3ca48f623e587fc887e269e",
+    "results/semantic_v1/workload_shuffled_6.json": "9848f44bba238db23cdc20d17d71b8efd16fccbe298c8c78db6cca41a44d911a",
+    "results/semantic_v1/workload_shuffled_7.json": "22daf334f52d4e9827939eb3e6c3ddd3bb6a41623478ac7db5c152cd7a6c1b00",
+    "results/semantic_v1/workload_shuffled_8.json": "d0e51447d4b5947c1c595a76b3a02f0886ddd06a942f325bf79a1a019474ee32",
+    "results/semantic_v1/workload_shuffled_9.json": "0d52ce8846e9896e9a0cf48761a6c258dcba642af0f278cba62d60695eeb52e0"
+  },
+  "elapsed_s": 95.02855587005615,
+  "pool_sha256": "6247b96fcd28e30a4c66526a8b47ccbdea7d5c1985d9ab2723f2ef306a7b983e",
+  "method": "float64 norm expansion/dot product versus saved SciPy squared-distance ground truth"
+}
