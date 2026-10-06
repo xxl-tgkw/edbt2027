@@ -7,8 +7,8 @@ anonymous review mirror is `https://anonymous.4open.science/r/edbt2027-7FD5/`.
 The complete archives are published through the GitHub release page because
 GitHub branch files are limited to 100 MB.  The 2026-10-06 archive hashes are:
 
-- `edbt2027_latex_20261006_152806_UTC.zip`:
-  `5209ea43db9f65850a5081354eedbaf63c73a346b1e0e43fa0e89ce94976519d`
+- `edbt2027_latex_20261006_161139_UTC.zip`:
+  `65685a7c9285a768972f10fee58de5052d4ab3e99c41b2338e788d581c8de739`
 - `uvrbench_artifact_*.zip`: use the matching `.zip.sha256` sidecar and release
   asset for the final checksum.
 
