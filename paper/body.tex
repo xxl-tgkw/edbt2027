@@ -479,15 +479,13 @@ dynamic graph index. The million-vector extension extends the paired replay to a
 larger corpus and records native update-aware graph implementations alongside IVF.
 \label{sec:native_dynamic}
 \input{paper/large_scale_dynamic_table}
-\input{paper/native_dynamic_table}
-\input{paper/native_coverage_table}
 The one-million-vector Faiss extension uses 800k initial vectors and five 40k insertion
 rounds, with paired arrival orders and held-out budget selection. Its one-seed result
 is reported separately from the ten-seed mechanism study. We also execute the official
-FreshDiskANN dynamic-memory API on the same 1M protocol; Table~\ref{tab:native_freshdiskann}
-shows the 512-budget endpoint and the artifact logs retain all four budgets. Recall
-remains below 0.90 for every budget, while query cost grows from 0.60--0.65 ms to about 3.2 ms p95; this is a
-measured native graph-quality boundary, not a missing-data placeholder.
+FreshDiskANN dynamic-memory API on the same 1M protocol. At its largest measured
+budget, test Recall@10 is 0.2719/0.2866 (shifted/shuffled), with worst-round recall
+0.1406/0.1766 and Q95 3.231/3.151 ms; all tested budgets miss the 0.90 floor.
+The complete four-budget curve and logs are retained in the artifact.
 
 We additionally ran the official CONDA implementation (commit
 \texttt{4117a4e3}) with the same 800k+5$\times$40k replay and $L_s=100$.
@@ -498,9 +496,9 @@ BatchSearch reports 39.27 ms and 38.71 ms for the five aggregate 128-query
 batches, respectively. These are native host-memory timings, not SSD/NVMe
 latencies, and the aggregate batch timing is deliberately not relabeled as a
 per-query p95. The paired difference shows that arrival order remains visible
-even in an update-aware graph implementation. UBIS is listed as a coverage
-boundary in Table~\ref{tab:native_coverage}: its public paper and source bundle
-do not expose an implementation or update API, so no UBIS number is fabricated.
+even in an update-aware graph implementation. SPFresh is measured only on its
+documented in-memory SPDK fallback; UBIS has no public implementation or update
+API in the released bundle, so no UBIS number is fabricated.
 
 For SPFresh, the official SPANN/SPFresh build and update path is run in one process on
 the documented SPFresh in-memory SPDK fallback (environment setting recorded in the
