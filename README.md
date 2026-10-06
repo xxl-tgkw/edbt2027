@@ -9,10 +9,14 @@ GitHub branch) is published as a release asset at
 
 Latest local archive hashes (2026-10-06 UTC, post-layout revision):
 
-- `edbt2027_latex_20261006_125712_UTC.zip`:
-  `dfc9cc937be264833f9e588c619e352d045f4e5344496f0ef1926b966aa9817a`
+- `edbt2027_latex_20261006_142536_UTC.zip`:
+  `17e9cb53145952ad273fe5ca764e8df55bb25a05f8929ed6c706a97763543aa6`
 - `uvrbench_artifact_*.zip`: use the matching `.zip.sha256` sidecar; the
   release page exposes the same archive and checksum.
+
+The paper uses the portable vector rendering of the updated method diagram in
+`results/uvrbench_protocol.svg`; the supplied `1234.svg/png` sources are
+preserved as `results/uvrbench_protocol_source.svg/png`.
 
 The branch deliberately omits the 143 MB HotpotQA matrix and the 485 MB source
 GloVe HDF5 because GitHub rejects files above 100 MB.  Their source checksums,
