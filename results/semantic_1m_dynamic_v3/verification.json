@@ -1,0 +1,7 @@
+{
+  "protocol": "semantic-1m-dynamic-v1",
+  "rows": 6,
+  "events": 30,
+  "unique_jobs": 6,
+  "status": "pass"
+}

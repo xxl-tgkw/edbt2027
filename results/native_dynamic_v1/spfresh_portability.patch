@@ -1,0 +1,127 @@
+diff --git a/AnnService/CMakeLists.txt b/AnnService/CMakeLists.txt
+index 0330796..a81670f 100644
+--- a/AnnService/CMakeLists.txt
++++ b/AnnService/CMakeLists.txt
+@@ -8,7 +8,17 @@ set(Dpdk ${PROJECT_SOURCE_DIR}/ThirdParty/spdk/dpdk/build)
+ set(IsalLCrypto ${PROJECT_SOURCE_DIR}/ThirdParty/isal-l_crypto/.libs/libisal_crypto.a)
+ set(SpdkLibPrefix ${Spdk}/lib/libspdk_)
+ set(DpdkLibPrefix ${Dpdk}/lib/librte_)
+-set(SPDK_LIBRARIES -Wl,--whole-archive ${SpdkLibPrefix}bdev_nvme.a ${SpdkLibPrefix}bdev.a ${SpdkLibPrefix}nvme.a ${SpdkLibPrefix}vfio_user.a ${SpdkLibPrefix}sock.a ${SpdkLibPrefix}dma.a ${SpdkLibPrefix}notify.a ${SpdkLibPrefix}accel.a ${SpdkLibPrefix}event_bdev.a ${SpdkLibPrefix}event_accel.a ${SpdkLibPrefix}vmd.a ${SpdkLibPrefix}event_vmd.a ${SpdkLibPrefix}event_sock.a ${SpdkLibPrefix}event_iobuf.a ${SpdkLibPrefix}event.a ${SpdkLibPrefix}env_dpdk.a ${SpdkLibPrefix}log.a ${SpdkLibPrefix}thread.a ${SpdkLibPrefix}rpc.a ${SpdkLibPrefix}init.a ${SpdkLibPrefix}jsonrpc.a ${SpdkLibPrefix}json.a ${SpdkLibPrefix}trace.a ${SpdkLibPrefix}util.a ${DpdkLibPrefix}mempool.a ${DpdkLibPrefix}mempool_ring.a ${DpdkLibPrefix}eal.a ${DpdkLibPrefix}ring.a ${DpdkLibPrefix}telemetry.a ${DpdkLibPrefix}bus_pci.a ${DpdkLibPrefix}kvargs.a ${DpdkLibPrefix}pci.a -Wl,--no-whole-archive dl rt isal ${IsalLCrypto} uuid)
++if (SPDK)
++    # SPDK's generated link set refers to ISA-L by its short name.
++    # Expose the local build directory explicitly so the native build does
++    # not depend on a system-wide ISA-L installation.
++    link_directories(${Spdk}/lib ${Dpdk}/lib)
++endif()
++if (SPDK)
++    set(SPDK_LIBRARIES -Wl,--whole-archive ${SpdkLibPrefix}bdev_nvme.a ${SpdkLibPrefix}bdev.a ${SpdkLibPrefix}nvme.a ${SpdkLibPrefix}vfio_user.a ${SpdkLibPrefix}sock.a ${SpdkLibPrefix}dma.a ${SpdkLibPrefix}notify.a ${SpdkLibPrefix}accel.a ${SpdkLibPrefix}event_bdev.a ${SpdkLibPrefix}event_accel.a ${SpdkLibPrefix}vmd.a ${SpdkLibPrefix}event_vmd.a ${SpdkLibPrefix}event_sock.a ${SpdkLibPrefix}event_iobuf.a ${SpdkLibPrefix}event.a ${SpdkLibPrefix}env_dpdk.a ${SpdkLibPrefix}log.a ${SpdkLibPrefix}thread.a ${SpdkLibPrefix}rpc.a ${SpdkLibPrefix}init.a ${SpdkLibPrefix}jsonrpc.a ${SpdkLibPrefix}json.a ${SpdkLibPrefix}trace.a ${SpdkLibPrefix}util.a ${DpdkLibPrefix}mempool.a ${DpdkLibPrefix}mempool_ring.a ${DpdkLibPrefix}eal.a ${DpdkLibPrefix}ring.a ${DpdkLibPrefix}telemetry.a ${DpdkLibPrefix}bus_pci.a ${DpdkLibPrefix}kvargs.a ${DpdkLibPrefix}pci.a -Wl,--no-whole-archive dl rt isal ${IsalLCrypto} uuid)
++else()
++    set(SPDK_LIBRARIES "")
++endif()
+ 
+ include_directories(${AnnService})
+ include_directories(${Zstd}/lib)
+@@ -120,9 +130,11 @@ file(GLOB_RECURSE USEFULTOOL_FILES ${AnnService}/src/UsefulTool/*.cpp)
+ 
+ add_executable(ssdserving ${SSD_SERVING_HDR_FILES} ${SSD_SERVING_FILES})
+ add_executable(spfresh ${SPFRESH_HDR_FILES} ${SPFRESH_FILES})
++add_executable(spfresh_memory_runner ${AnnService}/src/SPFreshMemoryRunner.cpp)
+ add_executable(usefultool ${USEFULTOOL_FILES})
+ target_link_libraries(ssdserving SPTAGLibStatic ${Boost_LIBRARIES} ${RocksDB_LIBRARIES})
+ target_link_libraries(spfresh SPTAGLibStatic ${Boost_LIBRARIES} ${RocksDB_LIBRARIES})
++target_link_libraries(spfresh_memory_runner SPTAGLibStatic ${Boost_LIBRARIES} ${RocksDB_LIBRARIES})
+ target_link_libraries(usefultool SPTAGLibStatic ${Boost_LIBRARIES} ${RocksDB_LIBRARIES})
+ target_compile_definitions(ssdserving PRIVATE _exe)
+ target_compile_definitions(spfresh PRIVATE _exe)
+diff --git a/AnnService/inc/Core/SPANN/ExtraRocksDBController.h b/AnnService/inc/Core/SPANN/ExtraRocksDBController.h
+index 5ebe241..03097f6 100644
+--- a/AnnService/inc/Core/SPANN/ExtraRocksDBController.h
++++ b/AnnService/inc/Core/SPANN/ExtraRocksDBController.h
+@@ -14,6 +14,7 @@
+ #include "rocksdb/options.h"
+ #include "rocksdb/merge_operator.h"
+ #include "rocksdb/table.h"
++#include "rocksdb/version.h"
+ 
+ #include <map>
+ #include <cmath>
+@@ -24,6 +25,7 @@ namespace SPTAG::SPANN
+ {
+     class RocksDBIO : public Helper::KeyValueIO
+     {
++#if defined(ROCKSDB_MAJOR) && ROCKSDB_MAJOR >= 7
+         class AnnMergeOperator : public rocksdb::MergeOperator
+         {
+         public:
+@@ -66,6 +68,7 @@ namespace SPTAG::SPANN
+                 return "AnnMergeOperator";
+             }
+         };
++#endif
+ 
+     public:
+         RocksDBIO(const char* filePath, bool usdDirectIO, bool wal = false) {
+@@ -75,7 +78,9 @@ namespace SPTAG::SPANN
+             if (!wal) {
+                 dbOptions.IncreaseParallelism();
+                 dbOptions.OptimizeLevelStyleCompaction();
++#if defined(ROCKSDB_MAJOR) && ROCKSDB_MAJOR >= 7
+                 dbOptions.merge_operator.reset(new AnnMergeOperator);
++#endif
+                 // dbOptions.statistics = rocksdb::CreateDBStatistics();
+ 
+                 // SST file size options
+@@ -92,7 +97,11 @@ namespace SPTAG::SPANN
+                 // rate limiter options
+                 // dbOptions.rate_limiter.reset(rocksdb::NewGenericRateLimiter(100UL << 20));
+ 
+-                // blob options
++                // Blob-file options were introduced after the RocksDB 6.x
++                // package available on the reproducibility host.  Keep the
++                // native SPFresh memory-backend build portable by enabling
++                // them only when the headers expose the API.
++#if defined(ROCKSDB_MAJOR) && ROCKSDB_MAJOR >= 7
+                 dbOptions.enable_blob_files = true;
+                 dbOptions.min_blob_size = 64;
+                 dbOptions.blob_file_size = 8UL << 30;
+@@ -100,6 +109,7 @@ namespace SPTAG::SPANN
+                 dbOptions.enable_blob_garbage_collection = true;
+                 dbOptions.compaction_pri = rocksdb::CompactionPri::kRoundRobin;
+                 dbOptions.blob_garbage_collection_age_cutoff = 0.4;
++#endif
+                 // dbOptions.blob_garbage_collection_force_threshold = 0.5;
+                 // dbOptions.blob_cache = rocksdb::NewLRUCache(5UL << 30);
+                 // dbOptions.prepopulate_blob_cache = rocksdb::PrepopulateBlobCache::kFlushOnly;
+@@ -120,7 +130,9 @@ namespace SPTAG::SPANN
+ 
+                 // filter options
+                 table_options.filter_policy.reset(rocksdb::NewBloomFilterPolicy(10, true));
++#if defined(ROCKSDB_MAJOR) && ROCKSDB_MAJOR >= 7
+                 table_options.optimize_filters_for_memory = true;
++#endif
+ 
+                 dbOptions.table_factory.reset(rocksdb::NewBlockBasedTableFactory(table_options));
+             }
+diff --git a/AnnService/src/Core/SPANN/ExtraSPDKController.cpp b/AnnService/src/Core/SPANN/ExtraSPDKController.cpp
+index c689f28..08aa0df 100644
+--- a/AnnService/src/Core/SPANN/ExtraSPDKController.cpp
++++ b/AnnService/src/Core/SPANN/ExtraSPDKController.cpp
+@@ -374,7 +374,17 @@ bool SPDKIO::BlockController::ReadBlocks(std::vector<AddressType*>& p_data, std:
+ bool SPDKIO::BlockController::WriteBlocks(AddressType* p_data, int p_size, const std::string& p_value) {
+     if (m_useMemImpl) {
+         for (int i = 0; i < p_size; i++) {
+-            memcpy(m_memBuffer.get() + p_data[i] * PageSize, p_value.data() + i * PageSize, PageSize);
++            // Posting values are not necessarily page aligned.  The original
++            // memory fallback copied a full page from the final short block,
++            // which overruns std::string and crashes on ordinary workloads.
++            // Mirror the SSD path: copy the available bytes and zero-pad the
++            // remainder of the page.
++            const size_t offset = static_cast<size_t>(i) * PageSize;
++            const size_t remaining = offset < p_value.size() ? p_value.size() - offset : 0;
++            const size_t bytes = std::min<size_t>(PageSize, remaining);
++            char* dst = m_memBuffer.get() + p_data[i] * PageSize;
++            if (bytes) memcpy(dst, p_value.data() + offset, bytes);
++            if (bytes < PageSize) memset(dst + bytes, 0, PageSize - bytes);
+         }
+         return true;
+     } else if (m_useSsdImpl) {

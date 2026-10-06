@@ -1,0 +1,15 @@
+uvr-1m:
+  type: float
+  max_pts: 1000000
+  step_size: 11
+  1: {operation: insert, start: 0, end: 800000}
+  2: {operation: insert, start: 800000, end: 840000}
+  3: {operation: search}
+  4: {operation: insert, start: 840000, end: 880000}
+  5: {operation: search}
+  6: {operation: insert, start: 880000, end: 920000}
+  7: {operation: search}
+  8: {operation: insert, start: 920000, end: 960000}
+  9: {operation: search}
+  10: {operation: insert, start: 960000, end: 1000000}
+  11: {operation: search}

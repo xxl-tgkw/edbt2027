@@ -1,0 +1,58 @@
+Loaded bigann-headered: num=1000000 dim=100 elem_size=4 bytes
+Loaded bigann-headered: num=128 dim=100 elem_size=4 bytes
+distance metric: 0
+alpha: 1.2  index: CONDA  metric: L2  dtype: float
+max nd : 1000000
+init dataset dimension of 104
+init graphstore size of 1000000
+1 : insert 0 ~ 800000
+rnn insert (lazy delete) 800000 vectors...
+BatchInsert execution time: 75.2741 seconds
+2 : insert 800000 ~ 840000
+rnn insert (lazy delete) 40000 vectors...
+BatchInsert execution time: 4.28934 seconds
+3 : search
+Search execution time (Ls = 100): 0.00779157 seconds
+4 : insert 840000 ~ 880000
+rnn insert (lazy delete) 40000 vectors...
+BatchInsert execution time: 4.21849 seconds
+5 : search
+Search execution time (Ls = 100): 0.00807103 seconds
+6 : insert 880000 ~ 920000
+rnn insert (lazy delete) 40000 vectors...
+BatchInsert execution time: 4.11103 seconds
+7 : search
+Search execution time (Ls = 100): 0.00781655 seconds
+8 : insert 920000 ~ 960000
+rnn insert (lazy delete) 40000 vectors...
+BatchInsert execution time: 3.84564 seconds
+9 : search
+Search execution time (Ls = 100): 0.00759133 seconds
+10 : insert 960000 ~ 1000000
+rnn insert (lazy delete) 40000 vectors...
+BatchInsert execution time: 3.42824 seconds
+11 : search
+Search execution time (Ls = 100): 0.00800123 seconds
+	Command being timed: "/tmp/conda-api-rQ4XEI/CONDA/build/tests/test /tmp/conda-uvr/uvr5.yaml uvr-1m /tmp/conda-uvr/shifted/data.bin /tmp/conda-uvr/shifted/queries.bin 64 32 750 1.2 100 10 /tmp/conda-uvr/results/conda_shifted_v2 float CONDA L2"
+	User time (seconds): 938.16
+	System time (seconds): 2.19
+	Percent of CPU this job got: 975%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:36.41
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1567848
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 399688
+	Voluntary context switches: 564
+	Involuntary context switches: 128548
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 80
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

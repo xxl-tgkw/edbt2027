@@ -1,0 +1,28 @@
+{
+  "method": "CONDA-native-memory",
+  "source": "darae-lee/CONDA",
+  "commit": "4117a4e38938aa0ff583c0c7c1beb5bb465e5b4b",
+  "source_url": "https://github.com/darae-lee/CONDA",
+  "dataset_protocol": "semantic-1m-dynamic-v1",
+  "base_vectors": 800000,
+  "update_rounds": 5,
+  "vectors_per_round": 40000,
+  "final_vectors": 1000000,
+  "queries": 128,
+  "validation_queries": 64,
+  "test_queries": 64,
+  "arrival_orders": ["shifted", "shuffled"],
+  "metric": "squared Euclidean on L2-normalized GloVe",
+  "parameters": {
+    "build_L": 64,
+    "R": 32,
+    "C": 750,
+    "alpha": 1.2,
+    "search_L": 100,
+    "k": 10
+  },
+  "backend": "official CONDA graph implementation in host memory",
+  "nvme_latency_measured": false,
+  "command_template": "build/tests/test scripts/conda_uvr_runbook.yaml uvr-1m DATA.bin QUERIES.bin 64 32 750 1.2 100 10 OUT float CONDA L2",
+  "notes": "The two orders use identical final membership and query identities. BatchSearch logs report aggregate 128-query wall time; no per-query p95 is inferred."
+}

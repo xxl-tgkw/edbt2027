@@ -1,0 +1,86 @@
+[
+  {
+    "order": "shifted",
+    "policy": "freshdiskann_native_memory",
+    "budget": 64,
+    "validation_rounds": [
+      0.10312500000000001,
+      0.1765625,
+      0.2375,
+      0.265625,
+      0.2890625
+    ],
+    "validation_mean": 0.21437499999999998,
+    "test_recall": 0.2575,
+    "worst_recall": 0.1328125,
+    "query_p95_ms": 0.6511588999999999,
+    "query_mean_ms": 0.47441618125000007,
+    "insert_ms": 153077.136918,
+    "C_ms": 153228.95009600002,
+    "C_plus_V_ms": 153380.763274,
+    "build_ms": 79613.533478
+  },
+  {
+    "order": "shifted",
+    "policy": "freshdiskann_native_memory",
+    "budget": 128,
+    "validation_rounds": [
+      0.10312500000000001,
+      0.1796875,
+      0.25,
+      0.27187500000000003,
+      0.3015625
+    ],
+    "validation_mean": 0.22125,
+    "test_recall": 0.2659375,
+    "worst_recall": 0.1390625,
+    "query_p95_ms": 1.1090965599999998,
+    "query_mean_ms": 0.802096946875,
+    "insert_ms": 153077.136918,
+    "C_ms": 153333.807941,
+    "C_plus_V_ms": 153590.478964,
+    "build_ms": 79613.533478
+  },
+  {
+    "order": "shifted",
+    "policy": "freshdiskann_native_memory",
+    "budget": 256,
+    "validation_rounds": [
+      0.10468750000000002,
+      0.1828125,
+      0.2515625,
+      0.2765625,
+      0.3140625
+    ],
+    "validation_mean": 0.22593750000000004,
+    "test_recall": 0.2696875,
+    "worst_recall": 0.140625,
+    "query_p95_ms": 1.7941623699999993,
+    "query_mean_ms": 1.38995463125,
+    "insert_ms": 153077.136918,
+    "C_ms": 153521.9224,
+    "C_plus_V_ms": 153966.70788200002,
+    "build_ms": 79613.533478
+  },
+  {
+    "order": "shifted",
+    "policy": "freshdiskann_native_memory",
+    "budget": 512,
+    "validation_rounds": [
+      0.10468750000000002,
+      0.1828125,
+      0.25312500000000004,
+      0.2796875,
+      0.3140625
+    ],
+    "validation_mean": 0.226875,
+    "test_recall": 0.271875,
+    "worst_recall": 0.140625,
+    "query_p95_ms": 3.23114498,
+    "query_mean_ms": 2.4699270624999996,
+    "insert_ms": 153077.136918,
+    "C_ms": 153867.513578,
+    "C_plus_V_ms": 154657.890238,
+    "build_ms": 79613.533478
+  }
+]

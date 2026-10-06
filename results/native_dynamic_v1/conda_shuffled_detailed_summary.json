@@ -1,0 +1,75 @@
+{
+  "protocol": "semantic-1m-dynamic-v1",
+  "method": "CONDA-native-memory",
+  "order": "shuffled",
+  "source_commit": "4117a4e38938aa0ff583c0c7c1beb5bb465e5b4b",
+  "source_url": "https://github.com/darae-lee/CONDA",
+  "parameters": {
+    "build_L": 64,
+    "R": 32,
+    "C": 750,
+    "alpha": 1.2,
+    "search_L": 100,
+    "k": 10
+  },
+  "base_vectors": 800000,
+  "update_rounds": 5,
+  "vectors_per_round": 40000,
+  "final_vectors": 1000000,
+  "queries": 128,
+  "validation_queries": 64,
+  "test_queries": 64,
+  "metric": "L2 on L2-normalized GloVe",
+  "rows": [
+    {
+      "round": 1,
+      "indexed": 840000,
+      "validation_recall": 0.771875,
+      "test_recall": 0.765625,
+      "worst_recall": 0.0,
+      "query_batch_ms": 7.415159999999999
+    },
+    {
+      "round": 2,
+      "indexed": 880000,
+      "validation_recall": 0.759375,
+      "test_recall": 0.7609375,
+      "worst_recall": 0.0,
+      "query_batch_ms": 7.730090000000001
+    },
+    {
+      "round": 3,
+      "indexed": 920000,
+      "validation_recall": 0.7640625000000001,
+      "test_recall": 0.7421875,
+      "worst_recall": 0.0,
+      "query_batch_ms": 7.910479999999999
+    },
+    {
+      "round": 4,
+      "indexed": 960000,
+      "validation_recall": 0.7625,
+      "test_recall": 0.7109375,
+      "worst_recall": 0.0,
+      "query_batch_ms": 7.78188
+    },
+    {
+      "round": 5,
+      "indexed": 1000000,
+      "validation_recall": 0.7593750000000001,
+      "test_recall": 0.715625,
+      "worst_recall": 0.0,
+      "query_batch_ms": 7.87258
+    }
+  ],
+  "validation_mean": 0.7634375,
+  "test_recall_mean": 0.7390625,
+  "worst_round_test_recall": 0.7109375,
+  "build_ms": 74744.1,
+  "insert_ms": 19703.13,
+  "search_batch_ms_mean": 7.742038000000001,
+  "search_batch_ms_p95": 7.902899999999999,
+  "nvme_latency_measured": false,
+  "host": "Linux-5.15.0-171-generic-x86_64-with-glibc2.35",
+  "note": "Official CONDA native in-memory graph run; BatchSearch reports aggregate 128-query wall time, not per-query p95."
+}

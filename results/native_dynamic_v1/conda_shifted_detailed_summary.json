@@ -1,0 +1,75 @@
+{
+  "protocol": "semantic-1m-dynamic-v1",
+  "method": "CONDA-native-memory",
+  "order": "shifted",
+  "source_commit": "4117a4e38938aa0ff583c0c7c1beb5bb465e5b4b",
+  "source_url": "https://github.com/darae-lee/CONDA",
+  "parameters": {
+    "build_L": 64,
+    "R": 32,
+    "C": 750,
+    "alpha": 1.2,
+    "search_L": 100,
+    "k": 10
+  },
+  "base_vectors": 800000,
+  "update_rounds": 5,
+  "vectors_per_round": 40000,
+  "final_vectors": 1000000,
+  "queries": 128,
+  "validation_queries": 64,
+  "test_queries": 64,
+  "metric": "L2 on L2-normalized GloVe",
+  "rows": [
+    {
+      "round": 1,
+      "indexed": 840000,
+      "validation_recall": 0.8203125,
+      "test_recall": 0.7828124999999999,
+      "worst_recall": 0.0,
+      "query_batch_ms": 7.79157
+    },
+    {
+      "round": 2,
+      "indexed": 880000,
+      "validation_recall": 0.80625,
+      "test_recall": 0.7875000000000001,
+      "worst_recall": 0.0,
+      "query_batch_ms": 8.07103
+    },
+    {
+      "round": 3,
+      "indexed": 920000,
+      "validation_recall": 0.79375,
+      "test_recall": 0.790625,
+      "worst_recall": 0.0,
+      "query_batch_ms": 7.81655
+    },
+    {
+      "round": 4,
+      "indexed": 960000,
+      "validation_recall": 0.809375,
+      "test_recall": 0.7984375,
+      "worst_recall": 0.0,
+      "query_batch_ms": 7.59133
+    },
+    {
+      "round": 5,
+      "indexed": 1000000,
+      "validation_recall": 0.8109375,
+      "test_recall": 0.78125,
+      "worst_recall": 0.0,
+      "query_batch_ms": 8.00123
+    }
+  ],
+  "validation_mean": 0.8081249999999999,
+  "test_recall_mean": 0.788125,
+  "worst_round_test_recall": 0.78125,
+  "build_ms": 75274.1,
+  "insert_ms": 19892.74,
+  "search_batch_ms_mean": 7.854342,
+  "search_batch_ms_p95": 8.05707,
+  "nvme_latency_measured": false,
+  "host": "Linux-5.15.0-171-generic-x86_64-with-glibc2.35",
+  "note": "Official CONDA native in-memory graph run; BatchSearch reports aggregate 128-query wall time, not per-query p95."
+}

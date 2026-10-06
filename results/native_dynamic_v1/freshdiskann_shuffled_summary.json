@@ -1,0 +1,86 @@
+[
+  {
+    "order": "shuffled",
+    "policy": "freshdiskann_native_memory",
+    "budget": 64,
+    "validation_rounds": [
+      0.1359375,
+      0.203125,
+      0.2390625,
+      0.2609375,
+      0.2828125
+    ],
+    "validation_mean": 0.22437500000000005,
+    "test_recall": 0.2646875,
+    "worst_recall": 0.16875,
+    "query_p95_ms": 0.6041231599999998,
+    "query_mean_ms": 0.4540453843749999,
+    "insert_ms": 142403.157597,
+    "C_ms": 142548.45212,
+    "C_plus_V_ms": 142693.74664300002,
+    "build_ms": 79861.235536
+  },
+  {
+    "order": "shuffled",
+    "policy": "freshdiskann_native_memory",
+    "budget": 128,
+    "validation_rounds": [
+      0.140625,
+      0.21406250000000002,
+      0.25468749999999996,
+      0.278125,
+      0.2984375
+    ],
+    "validation_mean": 0.23718750000000002,
+    "test_recall": 0.27906250000000005,
+    "worst_recall": 0.17500000000000002,
+    "query_p95_ms": 0.9929397899999997,
+    "query_mean_ms": 0.75118595,
+    "insert_ms": 142403.157597,
+    "C_ms": 142643.53710100002,
+    "C_plus_V_ms": 142883.916605,
+    "build_ms": 79861.235536
+  },
+  {
+    "order": "shuffled",
+    "policy": "freshdiskann_native_memory",
+    "budget": 256,
+    "validation_rounds": [
+      0.1421875,
+      0.2171875,
+      0.26093749999999993,
+      0.2875,
+      0.3125
+    ],
+    "validation_mean": 0.2440625,
+    "test_recall": 0.284375,
+    "worst_recall": 0.1765625,
+    "query_p95_ms": 1.8232587499999995,
+    "query_mean_ms": 1.3380357593749999,
+    "insert_ms": 142403.157597,
+    "C_ms": 142831.32904,
+    "C_plus_V_ms": 143259.500483,
+    "build_ms": 79861.235536
+  },
+  {
+    "order": "shuffled",
+    "policy": "freshdiskann_native_memory",
+    "budget": 512,
+    "validation_rounds": [
+      0.1421875,
+      0.21875000000000003,
+      0.26093749999999993,
+      0.2875,
+      0.31562500000000004
+    ],
+    "validation_mean": 0.24500000000000002,
+    "test_recall": 0.28656250000000005,
+    "worst_recall": 0.1765625,
+    "query_p95_ms": 3.1509023899999997,
+    "query_mean_ms": 2.391177425,
+    "insert_ms": 142403.157597,
+    "C_ms": 143168.33437300002,
+    "C_plus_V_ms": 143933.511149,
+    "build_ms": 79861.235536
+  }
+]

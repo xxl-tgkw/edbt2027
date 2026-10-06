@@ -1,0 +1,19 @@
+{
+  "protocol": "semantic-1m-dynamic-v1",
+  "args": {
+    "output": "results/semantic_1m_dynamic_v3",
+    "seeds": [
+      0
+    ],
+    "nq": 128
+  },
+  "source_sha256": "544af1d5e84e112cd4749571dcfd8ca109818a572f850af75a3a09e093a953c4",
+  "source_shape": [
+    1183514,
+    100
+  ],
+  "python": "3.10.12",
+  "faiss": "1.15.0",
+  "started_unix": 1790871965.2010632,
+  "elapsed_s": 1022.2134389877319
+}

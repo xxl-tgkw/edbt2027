@@ -1,0 +1,13 @@
+{
+  "host": "VM-0-3-ubuntu",
+  "kernel": "5.15.0-171-generic",
+  "arch": "x86_64",
+  "gpu": "not used",
+  "nvme_devices": [],
+  "diskann_commit": "78256bbab4685e1774e78d331e081a153be26823",
+  "spfresh_commit": "5893eb61ee3b18610b6b00f1939be7dae1af8904",
+  "rocksdb": "6.11.4 (system headers; blob options guarded)",
+  "backend": "SPFRESH_SPDK_USE_MEM_IMPL=1",
+  "timestamp_utc": "2026-10-02",
+  "provenance": "All values are from the raw logs in this directory; no placeholder values are used."
+}

@@ -1,0 +1,29 @@
+{
+  "protocol": "hotpot-semantic-order-v1",
+  "preparation_seed": 20261004,
+  "source": {
+    "path": "/home/ubuntu/.cache/huggingface/hub/datasets--hotpot_qa/snapshots/1908d6afbbead072334abe2965f91bd2709910ab/distractor/validation-00000-of-00001.parquet",
+    "sha256": "c20b638ca82b21d04fe12e14ff417ad05153d4d215a65de54497fca4e972f7c6",
+    "bytes": 27452575,
+    "split": "distractor/validation",
+    "rows": 7405
+  },
+  "encoder": {
+    "path": "/home/ubuntu/.cache/huggingface/hub/models--sentence-transformers--all-MiniLM-L6-v2/snapshots/c9745ed1d9f207416be6d2e6f8de32d1f16199bf",
+    "sha256": "1c101578933563c128e2cc16b5f9b7ac1be28cfeeb9c6a13f7926af406022023",
+    "license": "Apache-2.0",
+    "name": "sentence-transformers/all-MiniLM-L6-v2",
+    "dimension": 384
+  },
+  "final_documents": 100000,
+  "initial_documents": 80000,
+  "update_rounds": 5,
+  "batch_size": 4000,
+  "query_count": 512,
+  "support_documents": 1246,
+  "pool_sha256": "3a210c9abfee13aa263362306ee20ddacb416abd1ad0d295eaa503c25fd99ac9",
+  "preprocessing": "title-prefixed context sentences; encoder L2 normalization",
+  "selection": "512 validation questions; all their supporting passages plus fixed-seed distractors",
+  "caveat": "Text-document semantic validation, not an agent trajectory, RAG end-to-end answer benchmark, or production timestamp trace",
+  "python": "3.10.12"
+}

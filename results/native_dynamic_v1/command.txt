@@ -1,0 +1,11 @@
+SPFRESH_SPDK_USE_MEM_IMPL=1 /tmp/spfresh-native/Release/spfresh_memory_runner /tmp/spfresh_smoke/build.ini
+
+# FreshDiskANN commands are recorded by the original runner logs:
+# /tmp/freshdiskann_run/shifted_native.log
+# /tmp/freshdiskann_run/shuffled_native.log
+
+# CONDA commit 4117a4e38938aa0ff583c0c7c1beb5bb465e5b4b:
+# cmake -S CONDA -B CONDA/build -DCMAKE_BUILD_TYPE=Release && cmake --build CONDA/build -j2
+# python3 scripts/prepare_conda_inputs.py --output /tmp/conda-shifted --order shifted
+# build/tests/test scripts/conda_uvr_runbook.yaml uvr-1m /tmp/conda-shifted/data.bin /tmp/conda-shifted/queries.bin 64 32 750 1.2 100 10 results/native_dynamic_v1/conda_shifted float CONDA L2
+# The shuffled command changes the input/output directory to conda-shuffled/conda_shuffled.

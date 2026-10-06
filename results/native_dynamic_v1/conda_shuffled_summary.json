@@ -1,0 +1,46 @@
+{
+  "protocol": "semantic-1m-dynamic-v1",
+  "method": "CONDA-native",
+  "order": "shuffled",
+  "search_L": 100,
+  "k": 10,
+  "rows": [
+    {
+      "round": 1,
+      "indexed": 840000,
+      "recall_mean": 0.76875,
+      "recall_min_query": 0.0,
+      "recall_p10_query": 0.3
+    },
+    {
+      "round": 2,
+      "indexed": 880000,
+      "recall_mean": 0.7601562500000001,
+      "recall_min_query": 0.0,
+      "recall_p10_query": 0.3
+    },
+    {
+      "round": 3,
+      "indexed": 920000,
+      "recall_mean": 0.753125,
+      "recall_min_query": 0.0,
+      "recall_p10_query": 0.27000000000000013
+    },
+    {
+      "round": 4,
+      "indexed": 960000,
+      "recall_mean": 0.7367187500000001,
+      "recall_min_query": 0.0,
+      "recall_p10_query": 0.2
+    },
+    {
+      "round": 5,
+      "indexed": 1000000,
+      "recall_mean": 0.7375,
+      "recall_min_query": 0.0,
+      "recall_p10_query": 0.17000000000000012
+    }
+  ],
+  "test_recall_mean": 0.7512500000000001,
+  "worst_round_recall": 0.7367187500000001
+}
