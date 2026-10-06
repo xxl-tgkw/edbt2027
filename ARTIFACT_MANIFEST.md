@@ -7,10 +7,10 @@ anonymous review mirror is `https://anonymous.4open.science/r/edbt2027-7FD5/`.
 The complete archives are published through the GitHub release page because
 GitHub branch files are limited to 100 MB.  The 2026-10-06 archive hashes are:
 
-- `edbt2027_latex_20261006_090431_UTC.zip`:
-  `20114d610979eb33600993816b7d296f24c3986a70bc06d0f0b976912800ccc0`
-- `uvrbench_artifact_20261006_090449_UTC.zip`:
-  `ca2ca46c8e748816cb5225bbbb78783aef553bbcc2c93bbd13e1fee5bd49bc57`
+- `edbt2027_latex_20261006_125712_UTC.zip`:
+  `dfc9cc937be264833f9e588c619e352d045f4e5344496f0ef1926b966aa9817a`
+- `uvrbench_artifact_*.zip`: use the matching `.zip.sha256` sidecar and release
+  asset for the final checksum.
 
 The branch omits only the 143 MB HotpotQA `pool.npz` and the 485 MB original
 GloVe HDF5.  Their manifests and deterministic preparation scripts remain in the
