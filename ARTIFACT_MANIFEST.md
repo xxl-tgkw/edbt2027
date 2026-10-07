@@ -7,14 +7,16 @@ anonymous review mirror is `https://anonymous.4open.science/r/edbt2027-7FD5/`.
 The complete archives are published through the GitHub release page because
 GitHub branch files are limited to 100 MB.  The 2026-10-06 archive hashes are:
 
-- `edbt2027_latex_20261006_161139_UTC.zip`:
-  `65685a7c9285a768972f10fee58de5052d4ab3e99c41b2338e788d581c8de739`
+- `edbt2027_latex_20261007_140931_UTC.zip`:
+  `09de8c19a6ceb1be152f35e4c74092ecc076192aa073459883e337dc6dffbf5a`
 - `uvrbench_artifact_*.zip`: use the matching `.zip.sha256` sidecar and release
   asset for the final checksum.
 
 The protocol figure in the paper is the portable vector rendering in
 `results/uvrbench_protocol.svg`; the author-supplied sources are preserved as
 `results/uvrbench_protocol_source.svg` and `results/uvrbench_protocol_source.png`.
+The LaTeX package includes the exact author-supplied submission PDF as
+`edbt_submission.pdf`; the manuscript-free artifact mirror does not include it.
 The submission PDF uses the required `[EA&B]` title prefix and is 12 pages total;
 native FreshDiskANN/CONDA coverage details remain fully available in the artifact.
 

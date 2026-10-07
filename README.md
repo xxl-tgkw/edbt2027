@@ -9,14 +9,18 @@ GitHub branch) is published as a release asset at
 
 Latest local archive hashes (2026-10-06 UTC, post-layout revision):
 
-- `edbt2027_latex_20261006_161139_UTC.zip`:
-  `65685a7c9285a768972f10fee58de5052d4ab3e99c41b2338e788d581c8de739`
+- `edbt2027_latex_20261007_140931_UTC.zip`:
+  `09de8c19a6ceb1be152f35e4c74092ecc076192aa073459883e337dc6dffbf5a`
+- `edbt_submission.pdf` (author-supplied final PDF):
+  `e9634554ce5e9499a11971d7fd62c30ff68ba3d40c6f7173062b1a5f2d6d8758`
 - `uvrbench_artifact_*.zip`: use the matching `.zip.sha256` sidecar; the
   release page exposes the same archive and checksum.
 
 The paper uses the portable vector rendering of the updated method diagram in
 `results/uvrbench_protocol.svg`; the supplied `1234.svg/png` sources are
 preserved as `results/uvrbench_protocol_source.svg/png`.
+The LaTeX release also includes `edbt_submission.pdf`, the exact 12-page PDF
+supplied for submission; `edbt.pdf` is the independently rebuilt source PDF.
 The current submission PDF has the required `[EA&B]` title prefix and is 12 pages
 total; native dynamic-index detail tables remain in the artifact package.
 

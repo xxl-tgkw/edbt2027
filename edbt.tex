@@ -64,21 +64,22 @@
 \renewcommand{\shortauthors}{Anonymous Author}
 
 \begin{abstract}
-Fixed-state vector-index measurements miss the cost and quality changes created by
-arrival order. UVR-Bench addresses this gap with a paired replay that holds the final
+Final-state vector-index measurements miss the cost and quality changes created by
+arrival history. UVR-Bench addresses this gap with a paired replay that holds the final
 corpus and query identities fixed, interleaves updates with queries, and records exact
-neighbors together with event-level work. Across controlled and public GloVe-100
-workloads, the protocol reveals when shifted arrivals create partition mismatch and
-when rebuilding recovers quality at a substantial maintenance cost. At a fixed low
-search budget, rebuilding improves recall for the shifted semantic stream, but
-recall-floor selection shows that increasing search work on a fixed index can be cheaper
-than rebuilding. The released logs, hashes, and independent checks make these
-conditional trade-offs reproducible and auditable. A 100k-vector HotpotQA
-document-semantic extension shows a near-zero order effect, marking the boundary of the
-claim beyond the constructed GloVe shift. A native 1M-vector replay broadens the
-validation to dynamic implementations; host-memory FreshDiskANN and SPFresh evidence
-is reported with its hardware boundary, and unavailable systems are not assigned
-substituted numbers.
+neighbors together with event-level work. Across controlled workloads and public
+GloVe-100 vectors, the protocol reveals when shifted arrivals create partition mismatch
+and when rebuilding recovers quality at a substantial maintenance cost. At a fixed low
+search budget in the shifted semantic stream, rebuilt IVF improves Recall@10 from
+0.5318 to 0.6364; under a 0.95 recall floor, however, increasing search work on the
+fixed index uses 255.9 ms of service work versus 1085.1 ms after rebuilding. The
+released logs, hashes, and independent checks make these conditional trade-offs
+reproducible and auditable. A 100k-vector HotpotQA document-sentence extension shows a
+near-zero order effect, marking the boundary of the claim beyond the constructed GloVe
+shift. A native 1M-vector replay broadens validation to dynamic implementations;
+host-memory FreshDiskANN and SPFresh evidence is reported with its hardware boundary,
+and unavailable systems are recorded as coverage boundaries rather than replaced by
+proxy numbers.
 \end{abstract}
 \keywords{vector retrieval, dynamic indexing, distribution drift, benchmarking, Faiss}
 \ccsdesc[500]{Information systems~Data management systems}
